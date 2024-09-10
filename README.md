@@ -1,4 +1,3 @@
-Here's a more user-friendly version of the README content, with enhanced formatting for clarity and readability:
 
 ---
 
@@ -268,4 +267,3 @@ A **composite entity** is an entity that is created to represent a many-to-many 
 
 ---
 
-Feel free to modify or add more details as needed!
