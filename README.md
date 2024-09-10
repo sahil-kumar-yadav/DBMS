@@ -192,3 +192,80 @@ An **Entity** is an object or concept about which you want to store information.
 
    ![Car Insurance ER Diagram Example](image-25.png)
 
+Here's a polished version of the README for your interview questions:
+
+---
+
+# Interview Questions and Answers
+
+### Q1. What is Cardinality? (Capgemini)
+
+Cardinality refers to the nature of the relationships between entities in a database. It defines the number of instances of one entity that can or must be associated with instances of another entity. The primary types of cardinality are:
+
+- **One-to-One:** A single record in one entity is related to a single record in another entity.
+- **One-to-Many:** A single record in one entity can be related to multiple records in another entity.
+- **Many-to-Many:** Multiple records in one entity can be related to multiple records in another entity.
+
+In database terminology, **high cardinality** indicates a column with a large number of unique values, while **low cardinality** means fewer unique values.
+
+---
+
+### Q2. What Does ERD Stand For, and What Is It? (TCS)
+
+**ERD** stands for **Entity Relationship Diagram**. It is a visual representation of entities and their relationships in a database. In an ERD:
+
+- **Entities** are represented by rectangles or boxes.
+- **Relationships** between entities are illustrated by lines or arrows connecting these boxes.
+
+ERDs help in designing and understanding the structure of a database.
+
+---
+
+### Q3. What is an Entity? (Wipro)
+
+An **entity** in a database context is a distinct object or concept that can be identified and stored. It represents a real-world object, person, place, or event. For detailed definitions of entities in specific operating systems, please refer to the notes under the heading "Entity."
+
+---
+
+### Q4. Explain a Real-Life Example of Generalization. (Amazon)
+
+**Generalization** involves creating a higher-level entity from multiple lower-level entities. For instance:
+
+- **Saving Account** and **Current Account** are specific types of accounts.
+- They can be generalized into a single higher-level entity called **Account**, which encompasses both types.
+
+---
+
+### Q5. How Does Generalization Differ from Specialization? (TCS, Infosys)
+
+- **Generalization** is a bottom-up approach where multiple lower-level entities are combined to form a higher-level entity. 
+  - Example: Combining **Saving Account** and **Current Account** into **Account**.
+
+- **Specialization** is a top-down approach where a higher-level entity is divided into lower-level entities.
+  - Example: Breaking down **Account** into **Saving Account** and **Current Account**.
+
+---
+
+### Q6. How is the Degree Assigned to a Relationship? (Adobe)
+
+The **degree** of a relationship in a database is determined by the number of entities involved in the relationship. It indicates how many entities participate in the relationship:
+
+- **Binary Relationship:** Involves two entities.
+- **Ternary Relationship:** Involves three entities.
+- **N-ary Relationship:** Involves more than three entities.
+
+---
+
+### Q7. What is a Composite Entity? (Veritas)
+
+A **composite entity** is an entity that is created to represent a many-to-many relationship between two other entities. It often includes foreign keys from both entities to form a composite key. For detailed definitions, please refer to the notes under the heading "Composite Entity."
+
+---
+
+### Q8. Explain Derived Attributes.
+
+**Derived attributes** are attributes whose values are computed from other attributes rather than being stored directly. For instance, an employee's **age** can be derived from their **date of birth**. For more detailed definitions, please refer to the notes under the heading "Derived Attribute."
+
+---
+
+Feel free to modify or add more details as needed!
