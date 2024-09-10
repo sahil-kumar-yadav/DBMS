@@ -40,7 +40,7 @@ An **Entity Relationship Diagram (ERD)** visually represents different data elem
 
 For example, the elements "writer," "novel," and "consumer" can be depicted using ER diagrams:
 
-![ER Model Example](image.png)
+![ER Model Example](./Images/image.png)
 
 In the diagram:
 - Entities are represented by rectangles.
@@ -60,13 +60,13 @@ An **Entity** is a distinguishable object with attributes. In a database, entiti
    ![Strong Entities](./Images/image-1.png)
 
 2. **Weak Entities**: Depend on other entities for identification.
-   ![Weak Entities](image-2.png)
+   ![Weak Entities](./Images/image-2.png)
 
 3. **Recursive Entities**: An entity where a relation exists between occurrences of the same entity set. For example, an employee who is also a manager.
-   ![Recursive Entities](image-3.png)
+   ![Recursive Entities](./Images/image-3.png)
 
 4. **Composite Entities**: Used to resolve many-to-many relationships by creating a bridge entity. Represented by a diamond shape within a rectangle.
-   ![Composite Entities](image-4.png)
+   ![Composite Entities](./Images/image-4.png)
 
 ### Entity Sets
 An **Entity Set** is a collection of similar entities. It can contain entities with attributes that share similar values. Entity sets do not need to be disjoint.
@@ -77,7 +77,7 @@ An **Entity Set** is a collection of similar entities. It can contain entities w
 A **Weak Entity** relies on another entity for its identification. It uses a foreign key combined with its attributes to form a primary key.
 
 **Example**: An order item depends on an order for its meaning.
-![Weak Entity Example](image-5.png)
+![Weak Entity Example](./Images/image-5.png)
 
 ### Attribute
 **Attributes** represent the properties of entities. They have specific values and fall within a defined domain.
@@ -87,16 +87,16 @@ A **Weak Entity** relies on another entity for its identification. It uses a for
 ### Types of Attributes
 
 1. **Simple Attributes**: Atomic values that cannot be divided further.
-   ![Simple Attributes](image-6.png)
+   ![Simple Attributes](./Images/image-6.png)
 
 2. **Composite Attributes**: Attributes that can be divided into smaller sub-attributes. Represented by a tree-like structure.
-   ![Composite Attributes](image-7.png)
+   ![Composite Attributes](./Images/image-7.png)
 
 3. **Derived Attributes**: Attributes whose values are derived from other attributes. They do not exist directly in the database.
-   ![Derived Attributes](image-8.png)
+   ![Derived Attributes](./Images/image-8.png)
 
 4. **Multi-valued Attributes**: Attributes that can hold multiple values.
-   ![Multi-valued Attributes](image-9.png)
+   ![Multi-valued Attributes](./Images/image-9.png)
 
 
 
@@ -106,23 +106,23 @@ A **Weak Entity** relies on another entity for its identification. It uses a for
 ### One-to-One
 In a one-to-one relationship, an entity from **Entity Set A** can be associated with at most one entity from **Entity Set B**, and vice versa.
 
-![One-to-One Relationship](image-10.png)
+![One-to-One Relationship](./Images/image-10.png)
 
 ### One-to-Many
 In a one-to-many relationship, an entity from **Entity Set A** can be associated with multiple entities from **Entity Set B**. However, an entity from **Entity Set B** can be associated with at most one entity from **Entity Set A**.
 
-![One-to-Many Relationship](image-11.png)
+![One-to-Many Relationship](./Images/image-11.png)
 
 ### Many-to-One
 In a many-to-one relationship, multiple entities from **Entity Set A** can be associated with at most one entity from **Entity Set B**. Conversely, an entity from **Entity Set B** can be associated with multiple entities from **Entity Set A**.
 
-![Many-to-One Relationship](image-12.png)
+![Many-to-One Relationship](./Images/image-12.png)
 
 ### Many-to-Many
 In a many-to-many relationship, an entity from **Entity Set A** can be associated with multiple entities from **Entity Set B** and vice versa.
 - A many to many relationships between two entities usually results in Three tables.
 
-![Many-to-Many Relationship](image-14.png)
+![Many-to-Many Relationship](./Images/image-14.png)
 
 ### Total and Partial Participation
 
@@ -130,7 +130,7 @@ In a many-to-many relationship, an entity from **Entity Set A** can be associate
 
 - **Partial Participation**: Not all entities in the entity set need to participate in the relationship. This is shown by single lines drawn from the entity to the relationship.
 
-![Total and Partial Participation](image-13.png)
+![Total and Partial Participation](./Images/image-13.png)
 
 
 
@@ -139,58 +139,58 @@ In a many-to-many relationship, an entity from **Entity Set A** can be associate
 ### Entities
 An **Entity** is an object or concept about which you want to store information.
 
-![Entity Example](image-15.png)
+![Entity Example](./Images/image-15.png)
 
 - **Weak Entity**: A weak entity cannot be uniquely identified by its own attributes alone and must be defined by a foreign key relationship with another entity.
 
-![Weak Entity Example](image-16.png)
+![Weak Entity Example](./Images/image-16.png)
 
 ### Relationships
 **Relationships** are represented by diamond shapes and show how two entities share information in the database.
 
-![Relationship Example](image-17.png)
+![Relationship Example](./Images/image-17.png)
 
 ### Attributes
 **Attributes** are represented by ovals. A **key attribute** is a unique, distinguishing characteristic of the entity.
 
 **Example**: An employee's social security number might be the key attribute for the employee.
 
-![Attribute Example](image-18.png)
+![Attribute Example](./Images/image-18.png)
 
 - **Multivalued Attribute**: An attribute that can have more than one value.
 
 **Example**: An employee entity can have multiple skill values.
 
-![Multivalued Attribute Example](image-19.png)
+![Multivalued Attribute Example](./Images/image-19.png)
 
 ### Generalization
 **Generalization** is the process of combining multiple entities into one generalized entity based on shared characteristics.
 
 **Example**: Pigeons, house sparrows, crows, and doves can all be generalized as "Birds."
 
-![Generalization Example](image-21.png)
+![Generalization Example](./Images/image-21.png)
 
 ### Specialization
 **Specialization** is the opposite of generalization. It involves dividing a group of entities into subgroups based on specific characteristics.
 
 **Example**: A person can be specialized into roles such as employee, employer, customer, or vendor, based on their role in a company. Similarly, in a school database, persons can be specialized into roles such as teacher, student, or staff.
 
-![Specialization Example](image-22.png)
+![Specialization Example](./Images/image-22.png)
 
 ### Aggregation
 **Aggregation** refers to the process of combining entities to form a single meaningful entity. It represents a relationship between a whole object and its component parts. Aggregation is used to model relationships among relationships.
 
-![Aggregation Example](image-23.png)
+![Aggregation Example](./Images/image-23.png)
 
 ### Problems
 
 1. **Hospital ER Diagram**: Construct an ER diagram for a hospital with a set of patients and a set of doctors. Associate each patient with a log of various tests and examinations conducted.
 
-   ![Hospital ER Diagram Example](image-24.png)
+   ![Hospital ER Diagram Example](./Images/image-24.png)
 
 2. **Car Insurance Company ER Diagram**: Construct an ER diagram for a car-insurance company where customers own one or more cars. Each car may have zero or more recorded accidents.
 
-   ![Car Insurance ER Diagram Example](image-25.png)
+   ![Car Insurance ER Diagram Example](./Images/image-25.png)
 
 Here's a polished version of the README for your interview questions:
 
