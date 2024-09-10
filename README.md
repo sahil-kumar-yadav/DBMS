@@ -57,7 +57,7 @@ An **Entity** is a distinguishable object with attributes. In a database, entiti
 ### Types of Entity
 
 1. **Strong Entities**: Exist independently of other entities.
-   ![Strong Entities](./Images//image-1.png)
+   ![Strong Entities](./Images/image-1.png)
 
 2. **Weak Entities**: Depend on other entities for identification.
    ![Weak Entities](image-2.png)
