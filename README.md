@@ -265,5 +265,437 @@ A **composite entity** is an entity that is created to represent a many-to-many 
 
 **Derived attributes** are attributes whose values are computed from other attributes rather than being stored directly. For instance, an employee's **age** can be derived from their **date of birth**. For more detailed definitions, please refer to the notes under the heading "Derived Attribute."
 
+Here's a formatted version of your content:
+
 ---
 
+### RDBMS
+
+**RDBMS** stands for Relational Database Management System. 
+
+Data in an RDBMS is structured in database tables, which consist of rows and columns. Each table row contains one or more fields (columns).
+
+An RDBMS stores data in a collection of tables that may be related through common fields (columns). It also provides relational operators for manipulating the data within these tables.
+
+---
+
+### Degree of Relationship
+
+The degree of relationship refers to the number of participating entities in a relationship. 
+
+- **Binary Relationship**: Involves two entity sets. Most relationships in database systems are binary.
+- **Ternary Relationship**: Involves three entity sets. Relationships with more than three entities are rare and become increasingly complex.
+
+**Types of Degree**:
+- **Unary**
+- **Binary**
+- **Ternary**
+
+---
+
+#### Unary Relationship
+
+A relationship is unary when both participating entity types are the same. The degree of such a relationship is 1.
+
+*Example*:  
+A single entity type participating in the relationship. The minimum degree of a relationship is one.
+
+![Unary Relationship](image.png)
+
+---
+
+#### Binary Relationship
+
+A relationship is binary when two entities are involved. The degree of this relationship is 2. Binary relationships can be easily converted into relational tables.
+
+*Example*:  
+The relationship "a Teacher teaches one or more Subjects" represents a binary relationship.
+
+![Binary Relationship](image-1.png)
+
+---
+
+#### Ternary Relationship
+
+A relationship involving three entities is called a ternary relationship. The degree of this relationship is 3. As the number of entities in the relationship increases, it becomes more complex to represent them in relational tables.
+
+*Example*:  
+The relationship between 'Employee', 'Department', and 'Location'. Here, an employee works in a department and at a specific location. Since three entities are involved, the degree of this relationship is 3.
+
+![Ternary Relationship](image-2.png)
+
+---
+
+### Database Schema
+
+The term **database schema** can refer to:
+1. A visual representation of a database.
+2. A set of rules governing the database.
+3. The entire set of objects belonging to a particular user.
+
+It includes attributes and instructions that define how data is organized and how elements are related.
+
+**Database Schema Types**:
+- **Logical Schema**
+- **Physical Schema**
+- **View Schema**
+
+---
+
+#### Logical Schema
+
+Represents how data is organized in tables and how attributes are linked together. Different schemas use various syntaxes to define logical architecture and constraints.
+
+---
+
+#### Physical Schema
+
+Represents how data is physically stored on disk storage. This includes the actual code used to create the database structure. For example:
+- In MongoDB with Mongoose, this is a Mongoose model.
+- In MySQL, SQL is used to construct tables.
+
+---
+
+#### View Schema
+
+Describes the view level design of the database, focusing on end-user interaction with the database system.
+
+---
+
+### Interview Questions and Answers
+
+#### **Q1. Give a quick idea of the term RDBMS?** (Adobe)
+
+**Answer**: An RDBMS (Relational Database Management System) helps in storing and managing data across multiple tables. It allows you to define relationships among different data entries using these tables. The relationships are expressed through values rather than pointers.
+
+---
+
+#### **Q2. How will you define a relational database model?** (Accenture)
+
+**Answer**: A relational database model defines the relationships among various databases and how they are interconnected. When multiple databases are linked, it creates flexibility and can be utilized within software applications as needed.
+
+---
+
+#### **Q3. What are the components of RDBMS?** (Vmware)
+
+**Answer**: The key components of an RDBMS include:
+- **Name**: A unique identifier for each relation (table).
+- **Attributes**: Columns in the table representing data fields.
+- **Tuples**: Rows in the table, each representing a single record.
+
+**Structure**:  
+- **Name → Attributes → Tuples**
+
+---
+
+#### **Q4. What is an E-R Model?** (Infosys)
+
+**Answer**: An E-R (Entity-Relationship) Model consists of entities and relational objects. Entities are represented by collections of attributes within the database, defining the data structure and relationships.
+
+---
+
+#### **Q5. Tell me something about various data abstraction levels?** (Goldman Sachs)
+
+**Answer**: In RDBMS, data abstraction occurs at three different levels:
+- **Physical Level**: Details data storage on disk.
+- **Logical Level**: Defines the organization and relationship of data tables.
+- **View Level**: Provides various perspectives and views of the database for user interaction.
+
+**Levels**:
+- Physical Level → Logical Level → View Levels (View 1, View 2, View 3)
+
+---
+
+#### **Q6. How are RDBMS preferable options over the DBMS?** (Amazon)
+
+**Answer**: RDBMSs are preferable over DBMSs because they:
+- Minimize redundancy and maintain data integrity.
+- Ensure data consistency and support data sharing across different databases.
+- Follow a set of rules for storage standards and security.
+
+---
+
+#### **Q7. What are the two specific rules that you should follow for each RDBMS to maintain data integrity?** (Flipkart)
+
+**Answer**: 
+1. **Entity Integrity**: The Primary Key must never contain NULL values.
+2. **Referential Integrity**: A Foreign Key must refer to a Primary Key in another table.
+
+---
+
+#### **Q8. Does RDBMS follow an object-oriented approach or not?** (Amazon)
+
+**Answer**: RDBMSs do not inherently follow an object-oriented approach. While object-oriented databases are based on objects and classes, RDBMSs are based on tables and relationships. The object-oriented model involves objects and classes with shared properties, which differs from the relational model's focus on table-based data structures.
+
+---
+
+#### **Q9. What are the different features of an RDBMS?** (Oracle)
+
+**Answer**: Key features of an RDBMS include:
+- **Name**: Each relation (table) must have a unique name.
+- **Attributes**: Columns in a table are called attributes.
+- **Tuples**: Rows in a table are called tuples, representing individual records.
+
+**Additional Feature**:
+- **Entity Integrity Constraint**: The primary key value cannot be NULL, as it is essential for identifying individual rows in a table. However, other columns can contain NULL values.
+
+---
+
+### Interview Questions and Answers
+
+#### **Q1. Give a quick idea of the term RDBMS?** (Adobe)
+
+**Answer**: An RDBMS (Relational Database Management System) is designed to store and manage data across multiple tables. It allows the definition of relationships among different data entries through these tables. These relationships are typically expressed using values rather than pointers.
+
+---
+
+#### **Q2. How will you define a relational database model?** (Accenture)
+
+**Answer**: A relational database model defines the relationships among different databases and how they are interconnected. By connecting multiple databases, it offers flexibility and can be leveraged within software applications as required.
+
+---
+
+#### **Q3. What are the components of RDBMS?** (Vmware)
+
+**Answer**: The primary components of an RDBMS include:
+- **Name**: A unique identifier for each relation (table).
+- **Attributes**: Columns in the table, representing data fields.
+- **Tuples**: Rows in the table, each representing a single record.
+
+**Structure**:  
+**Name → Attributes → Tuples**
+
+---
+
+#### **Q4. What is an E-R Model?** (Infosys)
+
+**Answer**: An Entity-Relationship (E-R) Model consists of entities and their relationships. Entities are represented by collections of attributes, defining the structure of the database and how different entities relate to each other.
+
+---
+
+#### **Q5. Tell me something about various data abstraction levels?** (Goldman Sachs)
+
+**Answer**: In RDBMS, data abstraction is organized into three levels:
+- **Physical Level**: Details the storage of data on disk.
+- **Logical Level**: Defines the structure and relationships of data tables.
+- **View Level**: Provides various perspectives and views of the database for user interaction.
+
+**Abstraction Levels**:  
+**Physical Level → Logical Level → View Levels (View 1, View 2, View 3)**
+
+---
+
+#### **Q6. How are RDBMS preferable options over the DBMS?** (Amazon)
+
+**Answer**: RDBMSs are preferable to traditional DBMSs because they:
+- Minimize redundancy and maintain data integrity.
+- Ensure data consistency and support data sharing across databases.
+- Follow strict rules for data storage standards and security.
+
+---
+
+#### **Q7. What are the two specific rules that you should follow for each RDBMS to maintain data integrity?** (Flipkart)
+
+**Answer**: To maintain data integrity in an RDBMS:
+1. **Entity Integrity**: The Primary Key must never contain NULL values.
+2. **Referential Integrity**: Foreign Keys must refer to Primary Keys in other tables.
+
+---
+
+#### **Q8. Does RDBMS follow an object-oriented approach or not?** (Amazon)
+
+**Answer**: No, RDBMS does not inherently follow an object-oriented approach. While object-oriented databases focus on objects and classes, RDBMSs use tables and relationships. The object-oriented model involves objects with attributes and methods, which is different from the table-based structure of an RDBMS.
+
+---
+
+#### **Q9. What are the different features of an RDBMS?** (Oracle)
+
+**Answer**: Key features of an RDBMS include:
+- **Name**: Each table (relation) must have a unique name.
+- **Attributes**: Columns in the table are called attributes.
+- **Tuples**: Rows in the table are called tuples, each representing a record.
+
+**Additional Feature**:
+- **Entity Integrity Constraint**: The primary key value cannot be NULL to ensure unique identification of rows. Other columns in the table may contain NULL values.
+
+---
+
+### Normalization
+
+**Normalization** is a process used to organize data in a database to reduce redundancy and improve data integrity. The main goals of normalization are to eliminate anomalies and ensure that the database structure is logically sound and efficient.
+
+---
+
+#### **What is Normalization?**
+
+Normalization involves structuring data into tables in such a way that:
+- **Data Redundancy**: Avoids duplication of data.
+- **Insertion Anomaly**: Prevents issues when inserting new data.
+- **Update Anomaly**: Prevents inconsistencies when updating data.
+- **Deletion Anomaly**: Prevents unintentional loss of data when deleting records.
+
+Normalization is a core principle of relational database theory and may lead to the creation of additional tables, which can sometimes result in data duplication. However, this structure ensures that database results are clear and as intended.
+
+---
+
+#### **Advantages of Normalization**
+
+1. **Elimination of Data Redundancy**: 
+   - Reduces the overall space consumed by the database, making it more compact.
+
+2. **Enforcement of Referential Integrity**: 
+   - Ensures consistency of data across all tables.
+
+3. **Easier Maintenance**: 
+   - Simplifies the management of data due to its logical and organized structure.
+
+4. **Improved Searching and Sorting**: 
+   - Facilitates quicker search and sort operations by having data in smaller, more manageable tables.
+
+---
+
+#### **Difference Between Normalization and Denormalization**
+
+Normalization and denormalization are contrasting processes:
+
+- **Normalization**:
+  - **Purpose**: To reduce redundancy by dividing large tables into smaller, more manageable ones.
+  - **Goal**: Prevent database anomalies and ensure a logical structure.
+  - **Effect**: May result in multiple tables and potential data duplication.
+
+- **Denormalization**:
+  - **Purpose**: To improve performance by adding redundant data to optimize read operations.
+  - **Goal**: Enhance read performance, often at the cost of increased complexity for write operations.
+  - **Effect**: Can result in slower write operations (insert, update, delete) due to additional constraints.
+
+**Best Practice**: "Normalize until it hurts, denormalize until it works." This means you should aim for normalization to eliminate redundancy and anomalies but consider denormalization when it benefits performance without compromising data integrity.
+
+---
+
+**Summary**: Normalization is crucial for maintaining a clean and efficient database structure, while denormalization can be employed strategically to improve performance for specific use cases.
+
+
+### Types of Normalization
+
+Normalization involves organizing a database to minimize redundancy and improve data integrity. There are several levels or normal forms of normalization, each addressing different types of anomalies.
+
+---
+
+#### **1st Normal Form (1NF)**
+
+**Definition**: 
+A table is in the First Normal Form (1NF) if:
+- All columns contain atomic (indivisible) values.
+- Each table has a primary key that uniquely identifies each record.
+- There are no repeating groups or arrays within the table.
+
+**Example of a Table Not in 1NF**:
+![alt text](image-3.png)
+
+**Transformation to 1NF**:
+To achieve 1NF, decompose the table into atomic elements so that each column contains only a single value.
+
+**Table in 1NF After Normalization**:
+![alt text](image-4.png)
+
+---
+
+#### **2nd Normal Form (2NF)**
+
+**Definition**: 
+A table is in the Second Normal Form (2NF) if:
+- It is in 1NF.
+- No non-prime attribute is dependent on a proper subset of any candidate key.
+
+**Definitions**:
+- **Prime Attribute**: An attribute that is part of a candidate key.
+- **Non-prime Attribute**: An attribute that is not part of any candidate key.
+
+**Example of a Table Not in 2NF**:
+![alt text](image-5.png)
+
+In this example, the primary key is a composite key (studio, movie), but the `city` attribute is dependent only on `studio` and not on the entire key.
+
+**Solution for 2NF**:
+- **Old Scheme**: {Studio, Movie, Budget, City}
+- **New Schemes**:
+  - {Movie, Studio, Budget}
+  - {Studio, City}
+
+**Tables in 2NF After Normalization**:
+![alt text](image-6.png)
+
+---
+
+#### **3rd Normal Form (3NF)**
+
+**Definition**:
+A table is in the Third Normal Form (3NF) if:
+- It is in 2NF.
+- No attribute is transitively dependent on the primary key.
+
+**Definition**:
+- **Transitive Dependency**: A condition where a non-key attribute depends on another non-key attribute, which in turn depends on the primary key.
+
+**Example of a Table Not in 3NF**:
+![alt text](image-7.png)
+
+Here, `Studio` is the primary key, but `CityTemp` is transitively dependent on `Studio` through `StudioCity`.
+
+**Solution for 3NF**:
+- **Old Scheme**: {Studio, StudioCity, CityTemp}
+- **New Schemes**:
+  - {Studio, StudioCity}
+  - {StudioCity, CityTemp}
+
+**Tables in 3NF After Normalization**:
+![alt text](image-8.png)
+
+---
+
+#### **Boyce-Codd Normal Form (BCNF) – 3.5NF**
+
+**Definition**:
+A table is in Boyce-Codd Normal Form (BCNF) if:
+- It is in 3NF.
+- Every determinant is a candidate key. This means there are no dependencies between attributes that are not candidate keys.
+
+**Example of a Table Not in BCNF**:
+- **Scheme**: {MovieTitle, MovieID, PersonName, Role, Payment}
+- **Candidate Keys**: {MovieTitle, PersonName} and {MovieID, PersonName}
+
+**Dependency Issue**: The dependency between `MovieID` and `MovieTitle` violates BCNF because neither is a candidate key in the context of the other attributes.
+
+**Solution for BCNF**:
+- **New Schemes**:
+  - {MovieID, PersonName, Role, Payment}
+  - {MovieID, MovieTitle}
+
+**Tables in BCNF After Normalization**:
+![alt text](image-10.png)
+
+---
+
+#### **4th Normal Form (4NF)**
+
+**Definition**:
+A table is in Fourth Normal Form (4NF) if:
+- It is in BCNF.
+- It has no multi-valued dependencies other than a candidate key. This means that a table should not have more than one multi-valued dependency.
+
+**Example of a Table Not in 4NF**:
+- **Scheme**: {MovieName, ScreeningCity, Genre}
+
+**Issue**: The table violates 4NF because `MovieName` can have multiple `ScreeningCity` values and multiple `Genre` values.
+
+**Solution for 4NF**:
+- **New Schemes**:
+  - {MovieName, ScreeningCity}
+  - {MovieName, Genre}
+
+**Tables in 4NF After Normalization**:
+![alt text](image-12.png)
+
+---
+
+Normalization helps in structuring a database to be efficient and consistent, reducing redundancy and anomalies. Each normal form builds upon the previous ones, addressing different aspects of database design.
